@@ -11,7 +11,7 @@ import io.ktor.server.routing.*
 import java.util.*
 
 fun Route.userRoute(
-    userService: UserService
+    userService: UserService,
 ) {
     post {
         val userRequest = call.receive<UserRequest>()
@@ -21,7 +21,6 @@ fun Route.userRoute(
 
         call.respond(HttpStatusCode.Created, createdUser.toResponse())
     }
-
     authenticate {
         get {
             val users = userService.findAll()
