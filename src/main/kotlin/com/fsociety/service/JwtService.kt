@@ -3,7 +3,7 @@ package com.fsociety.service
 import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
-import com.fsociety.routing.request.LoginRequest
+import com.fsociety.common.request.LoginRequest
 import io.ktor.server.application.*
 import io.ktor.server.auth.jwt.*
 import java.util.*

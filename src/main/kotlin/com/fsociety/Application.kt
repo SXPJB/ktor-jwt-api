@@ -1,5 +1,6 @@
 package com.fsociety
 
+import com.fsociety.domain.db.DatabaseConfig
 import com.fsociety.plugins.configureKoin
 import com.fsociety.plugins.configureSecurity
 import com.fsociety.plugins.configureSerialization
@@ -12,6 +13,7 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    DatabaseConfig.init(environment)
     configureKoin()
     configureSerialization()
     configureSecurity()

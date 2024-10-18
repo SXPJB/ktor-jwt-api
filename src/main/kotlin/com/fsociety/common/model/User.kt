@@ -1,6 +1,6 @@
-package com.fsociety.model
+package com.fsociety.common.model
 
-import com.fsociety.routing.response.UserResponse
+import com.fsociety.common.response.UserResponse
 import java.util.UUID
 
 data class User(
@@ -8,8 +8,6 @@ data class User(
     val username: String,
     val password: String,
 ) {
-    companion object
-
     fun toResponse(): UserResponse {
         return UserResponse(
             id = id,

@@ -1,4 +1,4 @@
-package com.fsociety.routing.request
+package com.fsociety.common.request
 
 import kotlinx.serialization.Serializable
 

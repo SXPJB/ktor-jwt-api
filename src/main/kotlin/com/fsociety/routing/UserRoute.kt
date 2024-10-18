@@ -1,6 +1,7 @@
 package com.fsociety.routing
 
-import com.fsociety.routing.request.UserRequest
+import com.fsociety.common.request.UserRequest
+import com.fsociety.service.UserPostgresqlService
 import com.fsociety.service.UserService
 import io.ktor.http.*
 import io.ktor.server.auth.*
@@ -12,7 +13,21 @@ import java.util.*
 
 fun Route.userRoute(
     userService: UserService,
+    userPostgresqlService: UserPostgresqlService
 ) {
+    post("/postgres-db") {
+        val userRequest = call.receive<UserRequest>()
+        val createdUser = userPostgresqlService.save(
+            user = userRequest.toModel()
+        )
+        call.respond(createdUser.toResponse())
+    }
+
+    get("/postgres-db") {
+        val users = userPostgresqlService.findAll().map { it.toResponse() }
+        call.respond(HttpStatusCode.OK, users)
+    }
+
     post {
         val userRequest = call.receive<UserRequest>()
         val createdUser = userService.save(

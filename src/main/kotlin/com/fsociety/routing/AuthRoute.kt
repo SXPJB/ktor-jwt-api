@@ -1,6 +1,6 @@
 package com.fsociety.routing
 
-import com.fsociety.routing.request.LoginRequest
+import com.fsociety.common.request.LoginRequest
 import com.fsociety.service.JwtService
 import io.ktor.http.*
 import io.ktor.server.request.*

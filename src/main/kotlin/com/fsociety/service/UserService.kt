@@ -1,6 +1,6 @@
 package com.fsociety.service
 
-import com.fsociety.model.User
+import com.fsociety.common.model.User
 import com.fsociety.repository.UserRepository
 import java.util.UUID
 

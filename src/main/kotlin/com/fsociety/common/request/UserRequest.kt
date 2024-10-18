@@ -1,6 +1,6 @@
-package com.fsociety.routing.request
+package com.fsociety.common.request
 
-import com.fsociety.model.User
+import com.fsociety.common.model.User
 import kotlinx.serialization.Serializable
 import java.util.*
 

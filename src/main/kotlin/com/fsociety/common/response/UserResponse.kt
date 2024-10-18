@@ -1,4 +1,4 @@
-package com.fsociety.routing.response
+package com.fsociety.common.response
 
 import com.fsociety.util.UUIDSerializer
 import kotlinx.serialization.Serializable

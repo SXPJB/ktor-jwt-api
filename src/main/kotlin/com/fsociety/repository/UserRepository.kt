@@ -1,6 +1,6 @@
 package com.fsociety.repository
 
-import com.fsociety.model.User
+import com.fsociety.common.model.User
 import java.util.UUID
 
 class UserRepository : CRUDRepository<User, UUID> {
