@@ -4,6 +4,7 @@ import com.fsociety.domain.db.DatabaseConfig
 import com.fsociety.plugins.configureKoin
 import com.fsociety.plugins.configureSecurity
 import com.fsociety.plugins.configureSerialization
+import com.fsociety.plugins.configureSwagger
 import com.fsociety.routing.configureRouting
 import io.ktor.server.application.*
 
@@ -17,5 +18,6 @@ fun Application.module() {
     configureKoin()
     configureSerialization()
     configureSecurity()
+    configureSwagger()
     configureRouting()
 }

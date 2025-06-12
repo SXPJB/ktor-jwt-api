@@ -1,7 +1,6 @@
 services:
   db:
     image: postgres:latest
-    container_name: auth-db
     env_file:
       - ./docker/db.env
     ports:
