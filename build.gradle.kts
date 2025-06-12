@@ -4,6 +4,7 @@ val koin_version: String by project
 val postgres_version: String by project
 val exposed_version: String by project
 val hikari_version: String by project
+val swagger_ui_version: String = "5.10.3"
 
 plugins {
     kotlin("jvm") version "2.0.21"
@@ -32,6 +33,11 @@ dependencies {
     implementation("io.ktor:ktor-server-auth-jvm")
     implementation("io.ktor:ktor-server-auth-jwt-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
+
+    // OpenAPI Documentation
+    implementation("io.ktor:ktor-server-swagger-jvm")
+    implementation("io.ktor:ktor-server-openapi-jvm")
+    implementation("org.webjars:swagger-ui:$swagger_ui_version")
 
     implementation("org.postgresql:postgresql:$postgres_version")
     implementation("com.zaxxer:HikariCP:$hikari_version")
